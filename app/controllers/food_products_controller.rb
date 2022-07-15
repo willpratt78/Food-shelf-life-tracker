@@ -23,6 +23,26 @@ class FoodProductController < ApplicationController
     render :edit
   end
 
+  def show
+    @food_product = FoodProduct.find(params[:id])
+    render :show
+  end
+
+  def update
+    @food_product= FoodProduct.find(params[:id])
+    if @food_product.update(food_product_params)
+      redirect_to food_products_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @food_product = FoodProduct.find(params[:id])
+    @food_product.destroy
+    redirect_to food_products_path
+  end
+
   private
     def food_product_params
       params.require(:food_product).permit(:food_, :amount_ordered_, :amount_to_sell_, :amount_of_pans_, :orders_per_pan_, :date_ordered_, :date_order_arrives_, :soft_out_date_, :hard_out_date_)

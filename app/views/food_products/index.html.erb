@@ -1,0 +1,13 @@
+<h1>Food Products</h1>
+
+<% if @food_products.any? %>
+  <ul>
+  <% @food_products.each do |food_product| %>
+  <li><%= link_to food_product.name, food_product_path(food_product) %></li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>No food products yet</p>
+<% end %>
+
+<p><%= link_to "Create new Food Product", new_food_product_path %></p>
