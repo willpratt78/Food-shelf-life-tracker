@@ -1,0 +1,19 @@
+<%= form_for @food_product do |f| %>
+  <%= f.label :food_ %>
+  <%= f.text_field :food_ %>
+  <%= f.label :amount_ordered_ %>
+  <%= f.number_field :amount_ordered_ %>
+  <%= f.label :amount_to_sell_ %>
+  <%= f.number_field :amount_to_sell_%>
+  <%= f.label :amount_of_pans_ %>
+  <%= f.number_field :amount_of_pans_%>
+  <%= f.label :date_ordered_ %>
+  <%= f.date_field :date_ordered_%>
+  <%= f.label :date_order_arrives_ %>
+  <%= f.date_field :date_order_arrives_ %>
+  <%= f.label :soft_out_date_ %>
+  <%= f.date_field :soft_out_date_ %>
+  <%= f.label :hard_out_date_ %>
+  <%= f.date_field :hard_out_date_ %>
+  <%= f.submit %>
+<% end %>
