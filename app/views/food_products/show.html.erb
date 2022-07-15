@@ -1,0 +1,17 @@
+<h1><%= @food_product.food_ %></h1>
+<h3>Info about this order:</h3>
+<ul>
+  <li>You ordered<%= @food_product.amount_ordered_ %> cases</li>
+  <li>You still have <%= @food_product.amount_to_sell_ %> orders to sell</li>
+  <li>You still have this many pans <%= @food_product.amount_of_pans_ %></li>
+  <li>It came in on <%= @food_product.date_order_arrives_ %></li>
+  <li>Your soft out date is <%= @food_product.soft_out_date_ %></li>
+  <li>Your hard out date is <%= @food_product.hard_out_date_ %></li>
+</ul>
+
+<p><%= link_to "Edit", edit_food_product_path(@food_product) %></p>
+<p><%= link_to "Delete", food_product_path(@food_product),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+
+<p><%= link_to "Return to food products", food_product_path %></p>
