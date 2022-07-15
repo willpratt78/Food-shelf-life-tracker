@@ -12,6 +12,7 @@ class FoodProductController < ApplicationController
   def create
     @food_product = FoodProduct.new(food_product_params)
     if @food_product.save
+      flash[:notice] = "Product successfully added!"
       redirect_to food_products_path
     else
       render :new
