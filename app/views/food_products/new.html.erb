@@ -1,3 +1,14 @@
+<%= if @food_product.errors.any? %>
+  <h3>Please fix these errors: </h3>
+  <ul>
+    <% @food_product.errors.full_messages.each do |message| %> 
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p>Form to add new order:</p>
+
 <%= form_for @food_product do |f| %>
   <%= f.label :food_ %>
   <%= f.text_field :food_ %>
