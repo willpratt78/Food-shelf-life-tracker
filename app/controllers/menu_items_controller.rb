@@ -47,6 +47,6 @@ class MenuItemsController < ApplicationController
 
   private
     def menu_item_params
-      params.require(:menu_item).permit(:food_, :amount_ordered_, :amount_to_sell_, :amount_of_pans_, :orders_per_pan_, :date_ordered_, :date_order_arrives_, :soft_out_date_, :hard_out_date_)
+      params.require(:menu_item).permit(:name_, :food_item1_, :food_item2_, :food_item3_)
     end
 end
