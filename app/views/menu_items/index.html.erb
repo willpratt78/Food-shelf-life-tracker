@@ -1,0 +1,13 @@
+<h1>Menu Items</h1>
+
+<% if @menu_items.any? %>
+  <ul>
+  <% @menu_items.each do |menu_item| %>
+  <li><%= link_to menu_item.name_, menu_item_path(menu_item) %></li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>No menu items yet</p>
+<% end %>
+
+<p><%= link_to "Create new Menu Item", new_menu_item_path %></p>

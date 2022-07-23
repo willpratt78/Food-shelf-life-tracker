@@ -1,0 +1,14 @@
+<h1><%= @menu_item.name_ %></h1>
+<h3>Info about this menu item:</h3>
+<ul>
+  <li>This item contains <%= @menu_item.food_item1_ %></li>
+  <li>This item contains <%= @menu_item.food_item2_ %></li>
+  <li>This item contains <%= @menu_item.food_item3_ %></li>
+</ul>
+
+<p><%= link_to "Edit", edit_menu_item_path(@menu_item) %></p>
+<p><%= link_to "Delete", menu_item_path(@menu_item),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+
+<p><%= link_to "Return to Menu Items", menu_items_path %></p>
