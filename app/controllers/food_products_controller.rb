@@ -1,4 +1,5 @@
-class FoodProductController < ApplicationController
+class FoodProductsController < ApplicationController
+  
   def index
     @food_products = FoodProduct.all
     render :index
