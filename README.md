@@ -1,24 +1,41 @@
-# README
+# Food_Ordering
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### A way to make ordering more efficient for kitchens
 
-Things you may want to cover:
+#### By William Pratt
 
-* Ruby version
+## Technologies Used
 
-* System dependencies
+* Ruby 2.6.5
+* Rails 5.2.8
+* pry
+* Postgres
+* psql
+* devise
+* HTML
+* CSS
 
-* Configuration
 
-* Database creation
+## This project is a way to cut down on the amount of hours management is working in a kitchen to try and have less paperwork, more cooking, and less overtime
 
-* Database initialization
+## Setup/Installation Requirements
 
-* How to run the test suite
+* Clone this repo
+* Run `postgres` in your terminal to start your sql server
+* In a new terminal, navigate to the root directory of this repo and run `bundle install` to install all required gems.
+* Run `rake db:create` to create development and test databases.
+* Run `rake db:migrate` to build necessary tables for the database.
+* Run `rails s` in the terminal from the root directory to start the server
+* Open your browser and navigate to http://localhost:3000/
+* Sign up to become a registered user to navigate the site.
+* You can now navigate the site
 
-* Services (job queues, cache servers, search engines, etc.)
+## Known Bugs
 
-* Deployment instructions
+*none at the moment
 
-* ...
+## License 
+
+MIT
+
+## Copyright (c) 07-24-2022 William Pratt
