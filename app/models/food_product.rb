@@ -10,4 +10,24 @@ class FoodProduct < ApplicationRecord
   validates :date_order_arrives_, presence: true
   validates :soft_out_date_, presence: true
   validates :hard_out_date_, presence: true
+
+
+
+  def alert_soft_out_date
+    if (self.soft_out_date_).to_i - (Time.new).to_i = 2
+       twilio gem syntax to send email/text to desired people
+    elsif (self.soft_out_date_).to_i - (Time.new).to_i = 0
+    end
+  end
+
+  def alert_hard_out_date
+    if (self.hard_out_date_).to_i - (Time.new).to_i < 0
+      destroy food item      
+    elsif (self.hard_out_date_).to_i - (Time.new).to_i = 0
+      twilio gem today is last day to sell item
+    elsif (self.hard_out_date_).to_i - (Time.new).to_i = 1
+      twilio gem synbtax send email/text to desired people
+  end
 end
+
+

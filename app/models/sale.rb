@@ -9,4 +9,5 @@ class Sale < ApplicationRecord
   def decrement_amount_of_pans
     self.food_product.update_attribute("amount_of_pans",(food_product.amount_ordered_ / food_product.orders_per_pan_))
   end
+  
 end
