@@ -15,8 +15,9 @@ class FoodProduct < ApplicationRecord
 
   def alert_soft_out_date
     if (self.soft_out_date_).to_i - (Time.new).to_i = 2
-       twilio gem syntax to send email/text to desired people
+       twilio gem syntax to send email/text to desired people that its 2 days before soft out date
     elsif (self.soft_out_date_).to_i - (Time.new).to_i = 0
+      twilio gem soft out date
     end
   end
 
@@ -26,7 +27,7 @@ class FoodProduct < ApplicationRecord
     elsif (self.hard_out_date_).to_i - (Time.new).to_i = 0
       twilio gem today is last day to sell item
     elsif (self.hard_out_date_).to_i - (Time.new).to_i = 1
-      twilio gem synbtax send email/text to desired people
+      twilio gem synbtax send email/text to desired people second to last day to sell
   end
 end
 
