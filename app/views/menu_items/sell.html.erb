@@ -1,0 +1,12 @@
+<h1>Menu Items</h1>
+
+<% if @menu_items.any? %>
+  <ul>
+  <% @menu_items.each do |menu_item| %>
+  <li><%= menu_item.name_ %></li>
+    <button type="button">Sell one order of this</button>
+  <% end %>
+  </ul>
+<% else %>
+  <p>No menu items yet, ask a manager to make one</p>
+<% end %>

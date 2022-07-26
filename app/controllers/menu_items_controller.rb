@@ -5,6 +5,11 @@ class MenuItemsController < ApplicationController
     render :index
   end
 
+  def sell
+    @menu_items = MenuItem.all
+    render :sell
+  end
+
   def new
     @menu_item = MenuItem.new
     render :new
