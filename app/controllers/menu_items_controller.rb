@@ -5,7 +5,7 @@ class MenuItemsController < ApplicationController
   end
 
   before_action :authenticate_user!, :only => [:index, :new, :create, :edit, :show, :update, :destory ] do
-    redirect_to new_user_session_path unless current_user && current_user.admin
+    redirect_to new_user_session_path unless current_user && current_user.admin?
   end
   
   def index
