@@ -7,7 +7,7 @@ class Sale < ApplicationRecord
   end
 
   def decrement_amount_of_pans
-    self.food_product.all[0].update_columns(amount_of_pans: (self.food_product.all[0].amount_to_sell_ / self.food_product.all[0].orders_per_pan_.to_f).ceil)
+    self.food_products.all[0].update_columns(amount_of_pans_: (self.food_products.all[0].amount_to_sell_ / self.food_products.all[0].orders_per_pan_.to_f).ceil)
   end
 
 end
