@@ -4,7 +4,7 @@
   <ul>
   <% @menu_items.each do |menu_item| %>
   <li><%= menu_item.name_ %></li>
-    <button 'decrement_to_sell', home_action_path, method :post type="button">Sell one order of this</button>
+    <%= button_to 'Sell Item', @self.decrement_to_sell %>
   <% end %>
   </ul>
 <% else %>
