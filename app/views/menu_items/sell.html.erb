@@ -4,7 +4,6 @@
   <ul>
   <% @menu_items.each do |menu_item| %>
     <li><%= menu_item.name_ %></li>
-    <%= button_to "Sell", sell_menu_item_path(@menu_item.id) %>
   <% end %>
   </ul>
 <% else %>

@@ -8,14 +8,8 @@
     <% for food_product in FoodProduct.all %>
       <%= check_box_tag "menu_item[food_product_id][]", food_product.id,
       @menu_item.food_products.include?(food_product) %>
-      <%=h food_product.food_ %><br />
+      <%= food_product.food_ %><br />
     <% end %>
   </p>
-  <%= f.label :food_item1_ %>
-  <%= f.text_field :food_item1_ %>
-  <%= f.label :food_item2_ %>
-  <%= f.text_field :food_item2_ %>
-  <%= f.label :food_item3_ %>
-  <%= f.text_field :food_item3_ %>
   <%= f.submit %>
 <% end %>
