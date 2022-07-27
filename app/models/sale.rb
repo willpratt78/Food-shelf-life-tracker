@@ -12,3 +12,5 @@ class Sale < ApplicationRecord
 
 end
 
+
+
