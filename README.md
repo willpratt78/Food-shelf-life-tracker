@@ -15,7 +15,6 @@
 * HTML
 * CSS
 
-
 ## This project is a way to cut down on the amount of hours management is working in a kitchen to try and have less paperwork, more cooking, and less overtime
 
 ## Setup/Installation Requirements
