@@ -9,3 +9,10 @@
 <% else %>
   <p>No menu items yet, ask a manager to make one</p>
 <% end %>
+
+<% if current_user.admin? %>
+  <p><%= link_to "Create new Menu Item", new_menu_item_path %></p>
+  <p><%= link_to "Create new Food Product", new_food_product_path %></p>
+  <p><%= link_to "Return to food products", food_products_path %></p>
+  
+<% end %>

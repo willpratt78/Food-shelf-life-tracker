@@ -30,6 +30,10 @@
 * You can now navigate the site
 * To make a user an admin and have access to more of the website open the rails c, type @user = User.first (replace first with correct  naming convention based off user id number, ie id 2 is User.second) then type @user.update(:admin => true) to change the user to an admin
 
+
+## Link to research done
+https://github.com/willpratt78/capstone-research
+
 ## Known Bugs
 
 *none at the moment
